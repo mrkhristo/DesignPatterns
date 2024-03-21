@@ -1,0 +1,14 @@
+﻿@using DesignPatterns.Models.Data;
+@model IEnumerable<Beer>;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-12">
+        @foreach(var b in Model)
+        {
+            <p>@($"{b.BeerId} - {b.Name}")</p>
+        }
+    </div>
+</div>
